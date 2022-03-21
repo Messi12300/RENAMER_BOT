@@ -27,10 +27,10 @@ async def rename(bot,update):
 async def doc(bot,update):
      new_name = update.message.text
      name = new_name.split(":-")
-     new_filename = name[1]
+     new_filename = name[4]
      file_path = f"downloads/{new_filename}"
      file = update.message.reply_to_message
-     ms = await update.message.edit("``` Trying To Download...```")
+     ms = await update.message.edit("``` ❤️Trying To Download...```")
      c_time = time.time()
      try:
      	path = await bot.download_media(message = file, progress=progress_for_pyrogram,progress_args=( "``` Trying To Download...```",  ms, c_time   ))
