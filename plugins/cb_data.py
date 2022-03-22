@@ -26,7 +26,8 @@ async def rename(bot,update):
 @Client.on_callback_query(filters.regex("doc"))
 async def doc(bot,update):
      new_name = update.message.text.split(" ", 1)
-     new_filename = new_name[1]
+     name = new_name
+     new_filename = name[1] 
      file_path = f"downloads/{new_filename}"
      file = update.message.reply_to_message
      ms = await update.message.edit("``` ❤️Trying To Download...```")
