@@ -27,7 +27,7 @@ async def rename(bot,update):
 async def doc(bot,update):
      new_name = update.message.text
      name = new_name.split(":-")
-     new_filename = update.message.text
+     new_filename = name[1]
      file_path = f"downloads/{new_filename}"
      file = update.message.reply_to_message
      ms = await update.message.edit("``` ❤️Trying To Download...```")
