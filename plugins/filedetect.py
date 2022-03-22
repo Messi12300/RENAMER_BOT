@@ -33,7 +33,7 @@ async def refunc(client,message):
         		try:
         			out = filename.split(".", 1)
         			out_name = out[1]
-        			out_filename= new_name 
+        			out_filename= new_name + "."+ out_name
         		except:
         			await message.reply_to_message.delete()
         			await message.reply_text("**Error** :  No  Extension in File, Not Supporting"
