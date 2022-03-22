@@ -54,7 +54,7 @@ async def doc(bot,update):
      		await ms.edit("```Trying To Uploading```")
      		c_time = time.time()
      		try:
-     			await bot.send_document(update.message.chat.id,document = file_path,thumb=ph_path,caption = f"**{new_filename}**",progress=progress_for_pyrogram,progress_args=( "```Trying To Uploading```",  ms, c_time   ))
+     			await bot.send_document(update.message.chat.id,document = file_path,thumb=ph_path,caption = f"**{new_filename}**\n\n🔗 𝗖𝗛𝗔𝗡𝗡𝗘𝗟 𝗟𝗜𝗡𝗞 ☞ \nhttps://t.me/+-SDHHv6F-gI2ZmZl\nhttps://t.me/+-SDHHv6F-gI2ZmZl\nhttps://t.me/+-SDHHv6F-gI2ZmZl",progress=progress_for_pyrogram,progress_args=( "```Trying To Uploading```",  ms, c_time   ))
      			await ms.delete()
      			os.remove(file_path)
      			os.remove(ph_path)
@@ -67,7 +67,7 @@ async def doc(bot,update):
      		await ms.edit("```Trying To Uploading```")
      		c_time = time.time()
      		try:
-     			await bot.send_document(update.message.chat.id,document = file_path,caption = f"**{new_filename}**",progress=progress_for_pyrogram,progress_args=( "```Trying To Uploading```",  ms, c_time   ))
+     			await bot.send_document(update.message.chat.id,document = file_path,caption = f"**{new_filename}**\n\n🔗 𝗖𝗛𝗔𝗡𝗡𝗘𝗟 𝗟𝗜𝗡𝗞 ☞ \nhttps://t.me/+-SDHHv6F-gI2ZmZl\nhttps://t.me/+-SDHHv6F-gI2ZmZl\nhttps://t.me/+-SDHHv6F-gI2ZmZl",progress=progress_for_pyrogram,progress_args=( "```Trying To Uploading```",  ms, c_time   ))
      			await ms.delete()
      			os.remove(file_path)
      		except Exception as e:
