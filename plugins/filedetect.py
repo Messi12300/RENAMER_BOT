@@ -13,9 +13,9 @@ async def refunc(client,message):
         	mime = types[0]
         	mg_id = media.reply_to_message.message_id
         	try:
-        		out = new_name.split(".")
+        		out = new_name.split(" " ,1)
         		out_name = out[3]
-        		out_filename = out[0] + "."+ out_name
+        		out_filename = out[0] + " "+ out_name
         		await message.reply_to_message.delete()
         		if mime == "video":
         			markup = InlineKeyboardMarkup([[ 
@@ -31,7 +31,7 @@ async def refunc(client,message):
         		
         	except:
         		try:
-        			out = filename.split(".")
+        			out = filename.split(" ", 1)
         			out_name = out[1]
         			out_filename= new_name 
         		except:
