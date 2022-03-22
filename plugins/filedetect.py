@@ -31,7 +31,7 @@ async def refunc(client,message):
         		
         	except:
         		try:
-        			out = filename.split(" ", 1)
+        			out = filename.split(".", 1)
         			out_name = out[1]
         			out_filename= new_name 
         		except:
