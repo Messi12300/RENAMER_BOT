@@ -15,7 +15,7 @@ async def refunc(client,message):
         	try:
         		out = new_name.split(" ", 1)
         		out_name = out[1]
-        		out_filename = out[0] + " "
+        		out_filename = out[0] + " " + out_name
         		await message.reply_to_message.delete()
         		if mime == "video":
         			markup = InlineKeyboardMarkup([[ 
@@ -33,7 +33,7 @@ async def refunc(client,message):
         		try:
         			out = filename.split(".", 1)
         			out_name = out[1]
-        			out_filename= new_name + "."
+        			out_filename= new_name + "." + out_name
         		except:
         			await message.reply_to_message.delete()
         			await message.reply_text("**Error** :  No  Extension in File, Not Supporting"
@@ -49,6 +49,6 @@ async def refunc(client,message):
         		else:
         			markup = InlineKeyboardMarkup([[ InlineKeyboardButton("📁 Documents",callback_data = "doc") ]])
         		# dont chenge this message.reply_text 
-        		await message.reply_text(f"**Select the output file type**\n**Output FileName** :- ```{out_filename}```",
+        		await message.reply_text(f"```{out_filename}```",
         		reply_to_message_id=mg_id,reply_markup = markup)
         		
